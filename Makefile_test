@@ -1,0 +1,22 @@
+#
+# Testing for Linux
+#
+
+######
+
+MAKE=make
+
+######
+
+all::
+
+######
+#
+all:: \
+projects
+projects:: ; \
+$(MAKE) -C projects -f Makefile_test
+#
+######
+
+###### end of [Makefile_test_linux] ######

@@ -1,0 +1,17 @@
+#
+# For testing
+#
+
+######
+
+SUBDIRS :=
+SUBDIRS += MEDIUM/CATS-parsemit-2015-05-21/JavaScript
+
+######
+#
+testall:: ; \
+for i in $(SUBDIRS); do $(MAKE) -C $$i -f Makefile testall; done
+#
+######
+
+###### end of [Makefile_test] ######

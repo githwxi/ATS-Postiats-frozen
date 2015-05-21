@@ -1,0 +1,48 @@
+os:
+  - osx
+  - linux
+env:
+  - CCATS2=GCC
+  - CCATS2=CLANG
+before_install:
+  - date
+  - cd ${HOME}
+  # Setting-up
+  - export ATSHOME=${HOME}/ats-lang-anairiats-0.2.12
+  - export ATSHOMERELOC=ATS-0.2.12
+  # Install pkgs
+  - ${TRAVIS_BUILD_DIR}/travis-ci/installpkg.sh
+  # Download ATS1
+  - ${TRAVIS_BUILD_DIR}/travis-ci/ats1_setup.sh 0.2.12
+  # Download ATS2
+  - export PATSHOME=${HOME}/ATS-Postiats
+  - git clone https://github.com/githwxi/ATS-Postiats.git ATS-Postiats
+  # Download ATS2-contrib
+  - export PATSHOMERELOC=${HOME}/ATS-Postiats-contrib
+  - git clone https://github.com/githwxi/ATS-Postiats-contrib.git ATS-Postiats-contrib
+  - export GCC=gcc
+  - export CLANG=clang
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then export GCC=gcc-4.8; fi
+script:
+  - ${GCC} --version
+  - ${CLANG} --version
+  # Building ATS1
+  - cd ${ATSHOME}
+  # ./configure&&make CC=${GCC} all
+  - ./configure&&make CC=${GCC} all_ngc
+  # Building ATS2
+  - cd ${PATSHOME}
+  - eval CC=\${${CCATS2}}
+  - GCFLAG=-D_ATS_NGC
+  # GCFLAG=-D_ATS_GCATS
+  # GCFLAG=-D_ATS_GCBDW
+  - C3NSTRINTKND=intknd
+  # C3NSTRINTKND=gmpknd
+  - make C3NSTRINTKND=${C3NSTRINTKND} -f Makefile_devl CC=${CC} GCFLAG=${GCFLAG} all
+  - export PATH=${PATH}:${PATSHOME}/bin
+  # Building atscc2js
+  - (cd ${PATSHOMERELOC}/projects/MEDIUM/CATS-atscc2js && make build && mv -f atscc2js ${PATSHOME}/bin/.)
+  # Running regress test
+  - make -f Makefile_test all
+after_script:
+  - date
