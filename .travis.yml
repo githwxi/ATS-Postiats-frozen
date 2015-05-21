@@ -11,6 +11,7 @@ before_install:
   - export ATSHOME=${HOME}/ats-lang-anairiats-0.2.12
   - export ATSHOMERELOC=ATS-0.2.12
   # Install pkgs
+  - sudo apt-get -y install libgc-dev
   - ${TRAVIS_BUILD_DIR}/travis-ci/installpkg.sh
   # Download ATS1
   - ${TRAVIS_BUILD_DIR}/travis-ci/ats1_setup.sh 0.2.12
