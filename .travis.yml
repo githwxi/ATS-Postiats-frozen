@@ -43,7 +43,7 @@ script:
   # Building atscc2js
   - (cd ${PATSHOMERELOC}/projects/MEDIUM/CATS-atscc2js && make build && mv -f atscc2js ${PATSHOME}/bin/.)
   # Running regress test
-  - pwd
+  - cd ${TRAVIS_BUILD_DIR}
   - make -f Makefile_test all
 after_script:
   - date
