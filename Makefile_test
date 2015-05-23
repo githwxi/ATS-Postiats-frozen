@@ -19,4 +19,4 @@ $(MAKE) -C projects -f Makefile_test
 #
 ######
 
-###### end of [Makefile_test_linux] ######
+###### end of [Makefile_test] ######
