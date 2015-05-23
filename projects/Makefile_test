@@ -6,7 +6,7 @@
 #
 SUBDIRS :=
 #
-SUBDIRS +=
+SUBDIRS += \
   MEDIUM/CATS-parsemit-2015-05-21/JavaScript
 #
 SUBDIRS += MEDIUM/CATS-parsemit-2015-05-21/PHP
