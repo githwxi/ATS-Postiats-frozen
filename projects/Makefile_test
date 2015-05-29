@@ -13,6 +13,8 @@ SUBDIRS += MEDIUM/CATS-parsemit-2015-05-21/PHP
 SUBDIRS += MEDIUM/CATS-parsemit-2015-05-21/Python
 SUBDIRS += MEDIUM/CATS-parsemit-2015-05-21/Perl
 #
+SUBDIRS += MEDIUM/CATS-parsemit-2015-05-21/CIL
+#
 ######
 #
 testall:: ; \

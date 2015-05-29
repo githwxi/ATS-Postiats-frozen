@@ -991,9 +991,17 @@ d0c.d0ecl_node of
 | D0Cdynloadflag_init
     (flag) =>
   (
-    emit_text (out, "// dynloadflag_init\n");
-    emit_text (out, "var "); emit_tmpvar (out, flag); emit_text (out, " = 0;\n")
+//
+// HX-2015-05-22:
+// it is skipped as JS does not have a link-time!
+//  
   ) (* end of [D0Cdynloadflag_init] *)
+| D0Cdynloadflag_minit
+    (flag) =>
+  (
+    emit_text (out, "// dynloadflag_minit\n");
+    emit_text (out, "var "); emit_tmpvar (out, flag); emit_text (out, " = 0;\n")
+  ) (* end of [D0Cdynloadflag_minit] *)
 //
 end // end of [emit_d0ecl]
 

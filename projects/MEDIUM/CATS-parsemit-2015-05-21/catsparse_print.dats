@@ -211,6 +211,7 @@ case+ x of
 | ATSdynloadflag_sta () => pr "ATSdynloadflag_sta"
 | ATSdynloadflag_ext () => pr "ATSdynloadflag_ext"
 | ATSdynloadflag_init () => pr "ATSdynloadflag_init"
+| ATSdynloadflag_minit () => pr "ATSdynloadflag_minit"
 //
 | ATSclosurerize_beg () => pr "ATSclosurerize_beg"
 | ATSclosurerize_end () => pr "ATSclosurerize_end"
@@ -529,6 +530,7 @@ ins0.instr_node of
 | ATSdynloadflag_sta (flag) => fprint! (out, "ATSdynloadflag_sta(", flag, ")")
 | ATSdynloadflag_ext (flag) => fprint! (out, "ATSdynloadflag_ext(", flag, ")")
 | ATSdynloadflag_init (flag) => fprint! (out, "ATSdynloadflag_init(", flag, ")")
+| ATSdynloadflag_minit (flag) => fprint! (out, "ATSdynloadflag_minit(", flag, ")")
 //
 | _ (*rest*) => fprint (out, "fprint_instr(...)")
 //
@@ -691,6 +693,8 @@ x.d0ecl_node of
 //
 | D0Cdynloadflag_init (flag) =>
     fprint! (out, "D0Cdynloadflag_init(", flag, ")")
+| D0Cdynloadflag_minit (flag) =>
+    fprint! (out, "D0Cdynloadflag_minit(", flag, ")")
 //
 end // end of [fprint_d0ecl]
 //

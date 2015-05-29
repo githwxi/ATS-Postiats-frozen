@@ -763,7 +763,14 @@ d0c.d0ecl_node of
 //
 | D0Cdynloadflag_init (flag) =>
   (
-    emit_text (out, "// dynloadflag_init\n");
+//
+// HX-2015-05-22:
+// it is skipped as PHP does not have a link-time!
+//  
+  )
+| D0Cdynloadflag_minit (flag) =>
+  (
+    emit_text (out, "// dynloadflag_minit\n");
     emit_global (out, flag); emit_text (out, " = 0;\n")
   )
 //

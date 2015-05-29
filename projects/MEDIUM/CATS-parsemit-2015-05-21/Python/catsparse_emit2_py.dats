@@ -1315,7 +1315,15 @@ d0c0.d0ecl_node of
     fl, env, arg, res
   ) => emit_closurerize (out, fl, env, arg, res)
 //
-| D0Cdynloadflag_init (flag) =>
+| D0Cdynloadflag_init
+    (flag) =>
+  {
+//
+// HX-2015-05-22:
+// it is skipped as Python does not have a link-time!
+//  
+  }
+| D0Cdynloadflag_minit (flag) =>
   {
     val () = emit_ENDL (out)
     val () = (
