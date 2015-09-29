@@ -52,3 +52,4 @@ script:
   - make -f Makefile_test all
 after_script:
   - date
+  # HX-2015-09-29: test run
