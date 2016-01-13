@@ -6,6 +6,12 @@
 #
 SUBDIRS :=
 #
+######
+#
+SUBDIRS += SMALL/html2pats-2016-01-13
+#
+######
+#
 SUBDIRS += \
   MEDIUM/CATS-parsemit-2015-05-21/JavaScript
 #
