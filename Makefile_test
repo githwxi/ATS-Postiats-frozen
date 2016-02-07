@@ -13,6 +13,13 @@ all::
 ######
 #
 all:: \
+contrib
+contrib:: ; \
+$(MAKE) -C contrib -f Makefile_test
+#
+######
+#
+all:: \
 projects
 projects:: ; \
 $(MAKE) -C projects -f Makefile_test
