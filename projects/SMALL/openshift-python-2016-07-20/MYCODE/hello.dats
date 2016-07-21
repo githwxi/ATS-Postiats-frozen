@@ -12,10 +12,12 @@
 (* ****** ****** *)
 //
 extern
-fun hello(): string = "mac#"
+fun
+hello(): string = "mac#"
 //
 implement
-hello() = "Hello from [patsopt+atscc2py3]!"
+hello() =
+"Hello from [patsopt+atscc2py3]!"
 //
 (* ****** ****** *)
 %{^
