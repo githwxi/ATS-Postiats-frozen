@@ -23,9 +23,10 @@ staload "./catsparse.sats"
 staload "./catsparse_parsing.sats"
 
 (* ****** ****** *)
-
-implement abort() = $raise(FatalErrorExn())
-
+//
+implement abort() =
+  let val () = ($raise(FatalErrorExn())): void in () end
+//
 (* ****** ****** *)
 
 (* end of [catsparse_error.dats] *)
