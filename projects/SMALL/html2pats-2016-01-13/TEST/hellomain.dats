@@ -1,5 +1,5 @@
 #define
-HTML2PATS_targetloc "$PATSHOMERELOC/projects/SMALL/html2pats"
+HTML2PATS_targetloc "./.."
 
 staload "{$HTML2PATS}/htmlprint.sats"
 

@@ -15,7 +15,10 @@ PATSHOMERELOCQ="$(PATSHOMERELOC)"
 
 PATSCC=$(PATSHOMEQ)/bin/patscc
 PATSOPT=$(PATSHOMEQ)/bin/patsopt
-HTML2PATS=$(PATSHOMERELOC)/projects/SMALL/html2pats
+
+######
+
+HTML2PATS=./..
 HTML2PATSBIN=$(HTML2PATS)/html2pats
 
 ######
