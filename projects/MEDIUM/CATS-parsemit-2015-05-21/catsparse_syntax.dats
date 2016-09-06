@@ -19,7 +19,8 @@ UN = "prelude/SATS/unsafe.sats"
 (* ****** ****** *)
 
 staload
-STRING = "libc/SATS/string.sats"
+STRING =
+"libats/libc/SATS/string.sats"
 
 (* ****** ****** *)
 

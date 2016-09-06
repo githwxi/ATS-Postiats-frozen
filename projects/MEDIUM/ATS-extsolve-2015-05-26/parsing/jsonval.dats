@@ -23,9 +23,9 @@ staload _ = "{$LIBATSWDBLAIR}/jsmn/DATS/jsmn.dats"
 
 (* ****** ****** *)
 
-staload "libc/SATS/string.sats"
-staload "libc/SATS/stdio.sats"
-staload "libc/SATS/stdlib.sats"
+staload "libats/libc/SATS/stdio.sats"
+staload "libats/libc/SATS/stdlib.sats"
+staload "libats/libc/SATS/string.sats"
 
 (* ****** ****** *)
 

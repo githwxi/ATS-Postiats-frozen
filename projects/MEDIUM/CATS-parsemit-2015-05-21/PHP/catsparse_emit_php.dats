@@ -32,11 +32,13 @@ staload "./catsparse_typedef.sats"
 (* ****** ****** *)
 
 local
-
+//
 staload
-TM = "libc/SATS/time.sats"
-stadef time_t = $TM.time_t
-
+TM =
+"libats/libc/SATS/time.sats"
+//
+typedef time_t = $TM.time_t
+//
 in (* in-of-local *)
 
 implement

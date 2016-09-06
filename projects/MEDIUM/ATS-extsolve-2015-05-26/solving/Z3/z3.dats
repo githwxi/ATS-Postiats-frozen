@@ -41,6 +41,15 @@
 
 (* ****** ****** *)
 
+staload
+UN = "prelude/SATS/unsafe.sats"
+
+(* ****** ****** *)
+
+staload "libats/libc/SATS/stdio.sats"
+
+(* ****** ****** *)
+
 staload "solving/smt.sats"
 staload "solving/error.sats"
 staload "solving/smt_ML.sats"
@@ -49,14 +58,6 @@ staload "solving/smt_ML.sats"
 
 staload "{$LIBATSWDBLAIR}/python/SATS/Python.sats"
 staload "{$LIBATSWDBLAIR}/SMT/Z3/SATS/z3.sats"
-
-(* ****** ****** *)
-
-staload UN = "prelude/SATS/unsafe.sats"
-
-(* ****** ****** *)
-
-staload "libc/SATS/stdio.sats"
 
 (* ****** ****** *)
 

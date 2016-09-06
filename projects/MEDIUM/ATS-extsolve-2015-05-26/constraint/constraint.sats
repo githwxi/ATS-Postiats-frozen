@@ -2,7 +2,8 @@
 ** ATS constaint-solving
 *)
 
-staload "libc/SATS/string.sats"
+staload
+"libats/libc/SATS/string.sats"
 
 (* ****** ****** *)
 
