@@ -2,7 +2,7 @@
 ##
 ## The Python3 code
 ## is generated from ATS source by atscc2py3
-## The starting compilation time is: 2016-7-21:  3h:16m
+## The starting compilation time is: 2016-7-21: 12h:55m
 ##
 ######
 
@@ -240,7 +240,7 @@ def _ats2pypre_stream_patsfun_8(env0):
   #__patsflab__ats2pypre_stream_patsfun_8
   tmp24 = ats2pypre_ref_get_elt(env0)
   ATSPMVlazyval_eval(tmp24); tmp25 = tmp24[1]
-  if(ATSCKptrisnull(tmp25)): ATSINScaseof_fail("/home/ubuntu/workspace/ATS2-contrib/contrib/libatscc/DATS/stream.dats: 1532(line=114, offs=5) -- 1556(line=114, offs=29)");
+  if(ATSCKptrisnull(tmp25)): ATSINScaseof_fail("/home/hwxi/Research/ATS-Postiats-contrib/contrib/libatscc/DATS/stream.dats: 1532(line=114, offs=5) -- 1556(line=114, offs=29)");
   tmp26 = tmp25[0]
   tmp27 = tmp25[1]
   ats2pypre_ref_set_elt(env0, tmp27)

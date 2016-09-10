@@ -2,7 +2,7 @@
 ##
 ## The Python3 code
 ## is generated from ATS source by atscc2py3
-## The starting compilation time is: 2016-7-21:  3h:16m
+## The starting compilation time is: 2016-7-21: 12h:55m
 ##
 ######
 
@@ -21,7 +21,7 @@ from ats2pypre_reference_dats import *
 #ATSextcode_end()
 ######
 
-#ATSassume(_057_home_057_ubuntu_057_workspace_057_ATS2_055_contrib_057_contrib_057_libatscc_057_libatscc2py3_057_SATS_057_slistref_056_sats__slistref_type)
+#ATSassume(_057_home_057_hwxi_057_Research_057_ATS_055_Postiats_055_contrib_057_contrib_057_libatscc_057_libatscc2py3_057_SATS_057_slistref_056_sats__slistref_type)
 
 def slistref_make_nil():
   tmpret0 = None
