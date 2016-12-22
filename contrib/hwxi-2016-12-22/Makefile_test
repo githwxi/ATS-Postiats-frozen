@@ -8,10 +8,16 @@ MAKE=make
 
 ## ###### ###### ##
 
+all::
+
+## ###### ###### ##
+
+ifeq ($(OS),linux)
 all:: \
 mysession
 mysession:: ; \
 $(MAKE) -C mysession -f Makefile_test
+endif # if(OS=linux)
 
 ## ###### ###### ##
 
