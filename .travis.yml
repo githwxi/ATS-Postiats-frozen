@@ -4,7 +4,7 @@ os:
 env:
   - CCATS2=GCC
   - CCATS2=CLANG
-sudo: required
+sudo: false
 before_install:
   - date
   - cd ${HOME}
@@ -51,7 +51,7 @@ script:
   - cd ${TRAVIS_BUILD_DIR}
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then export Makefile_test=Makefile_test_osx; fi
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then export Makefile_test=Makefile_test_linux; fi
-  - make -f Makefile_test all
+  - make -f ${Makefile_test} all
 after_script:
   - date
   # HX-2015-09-29: test run

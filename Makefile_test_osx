@@ -1,0 +1,33 @@
+#
+# Testing for Linux
+#
+
+######
+
+OS=osx
+
+######
+
+MAKE=make
+
+######
+
+all::
+
+######
+#
+all:: \
+contrib
+contrib:: ; \
+$(MAKE) OS=$(OS) -C contrib -f Makefile_test
+#
+######
+#
+all:: \
+projects
+projects:: ; \
+$(MAKE) OS=$(OS) -C projects -f Makefile_test
+#
+######
+
+###### end of [Makefile_test_osx] ######
