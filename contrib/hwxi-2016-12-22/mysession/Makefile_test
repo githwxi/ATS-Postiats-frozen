@@ -7,12 +7,10 @@
 MAKE=make
 
 ## ###### ###### ##
-
-all:: \
-test_P2
-test_P2:: ; \
-$(MAKE) -C P2 -f Makefile testall
-
+#
+all:: ; \
+$(MAKE) -C TEST -f Makefile testall
+#
 ## ###### ###### ##
 
 ## ###### end of [Makefile_test] ###### ##

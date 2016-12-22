@@ -11,7 +11,7 @@ MAKE=make
 all:: \
 PEULER
 PEULER:: ; \
-$(MAKE) -C PEULER -f Makefile_test
+$(MAKE) -C PEULER -f Makefile_test all
 
 ## ###### ###### ##
 

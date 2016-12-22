@@ -9,6 +9,11 @@ MAKE=make
 ######
 #
 testall:: ; \
+$(MAKE) -C hwxi-2016-12-22 -f Makefile_test
+#
+######
+#
+testall:: ; \
 $(MAKE) -C bbarker-2016-02-06 -f Makefile_test
 #
 ######

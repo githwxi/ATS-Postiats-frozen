@@ -9,9 +9,9 @@ MAKE=make
 ## ###### ###### ##
 
 all:: \
-test_P2
-test_P2:: ; \
-$(MAKE) -C P2 -f Makefile testall
+mysession
+mysession:: ; \
+$(MAKE) -C mysession -f Makefile_test
 
 ## ###### ###### ##
 
