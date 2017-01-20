@@ -51,6 +51,7 @@ then
 # sudo apt-get -qq -y install libev-dev
 # For contrib/jansson/
 # sudo apt-get -qq -y install libjansson-dev
+  echo "Linux: no need for installing packages."    
 #
 fi
 
