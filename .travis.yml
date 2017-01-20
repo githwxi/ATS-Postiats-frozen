@@ -28,7 +28,7 @@ before_install:
   - export PATSHOME=${HOME}/ATS-Postiats
   - git clone https://github.com/githwxi/ATS-Postiats.git ATS-Postiats
   # Download ATS2-contrib
-  - export PATSHOMERELOC=${HOME}/ATS-Postiats-contrib
+  - export PATSCONTRIB=${HOME}/ATS-Postiats-contrib
   - git clone https://github.com/githwxi/ATS-Postiats-contrib.git ATS-Postiats-contrib
   - export GCC=gcc
   - export CLANG=clang
@@ -51,11 +51,11 @@ script:
   - make C3NSTRINTKND=${C3NSTRINTKND} -f Makefile_devl CC=${CC} GCFLAG=${GCFLAG} all
   - export PATH=${PATH}:${PATSHOME}/bin
   # Building parsemit
-  - (cd ${PATSHOMERELOC}/projects/MEDIUM/CATS-parsemit && make all)
+  - (cd ${PATSCONTRIB}/projects/MEDIUM/CATS-parsemit && make all)
   # Building atscc2js
-  - (cd ${PATSHOMERELOC}/projects/MEDIUM/CATS-atsccomp/CATS-atscc2js && make build && mv -f atscc2js ${PATSHOME}/bin/.)
+  - (cd ${PATSCONTRIB}/projects/MEDIUM/CATS-atsccomp/CATS-atscc2js && make build && mv -f atscc2js ${PATSHOME}/bin/.)
   # Building atscc2php
-  - (cd ${PATSHOMERELOC}/projects/MEDIUM/CATS-atsccomp/CATS-atscc2php && make build && mv -f atscc2php ${PATSHOME}/bin/.)
+  - (cd ${PATSCONTRIB}/projects/MEDIUM/CATS-atsccomp/CATS-atscc2php && make build && mv -f atscc2php ${PATSHOME}/bin/.)
   # Running regress test
   - cd ${TRAVIS_BUILD_DIR}
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then export Makefile_test=Makefile_test_osx; fi
@@ -66,3 +66,4 @@ after_script:
   # HX-2015-09-29: test run
   # HX-2015-10-03: test run
   # HX-2016-12-22: test run
+  # HX-2017-01-20: test run
