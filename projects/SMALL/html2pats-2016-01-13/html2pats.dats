@@ -12,7 +12,7 @@
 //
 #define
 LIBXML2_targetloc
-"$PATSHOMERELOC/contrib/libxml2/libxml"
+"$PATSCONTRIB/contrib/libxml2/libxml"
 //
 (* ****** ****** *)
 //

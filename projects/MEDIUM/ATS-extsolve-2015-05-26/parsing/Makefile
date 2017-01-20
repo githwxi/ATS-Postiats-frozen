@@ -13,7 +13,7 @@ PATSCC := $(PATSCC) -IATS ../
 
 ######
 
-CFLAGS += -I ./ -O2
+CFLAGS += -O2 -I . -I ./../libats-wdblair
  
 ######
 

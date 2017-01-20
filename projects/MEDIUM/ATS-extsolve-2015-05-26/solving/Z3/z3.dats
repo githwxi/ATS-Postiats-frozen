@@ -31,14 +31,14 @@
 // Start Time: April, 2013
 //
 (* ****** ****** *)
-
+//
 #include
 "share/atspre_define.hats"
 #include
 "share/atspre_staload.hats"
-#include
-"patsolve.hats"
-
+//
+#include "patsolve.hats"
+//
 (* ****** ****** *)
 
 staload
@@ -56,8 +56,8 @@ staload "solving/smt_ML.sats"
 
 (* ****** ****** *)
 
-staload "{$LIBATSWDBLAIR}/python/SATS/Python.sats"
 staload "{$LIBATSWDBLAIR}/SMT/Z3/SATS/z3.sats"
+staload "{$LIBATSWDBLAIR}/python/SATS/Python.sats"
 
 (* ****** ****** *)
 

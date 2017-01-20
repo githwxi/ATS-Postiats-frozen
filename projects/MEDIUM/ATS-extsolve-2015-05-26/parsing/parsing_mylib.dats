@@ -28,7 +28,7 @@ JSMN_STRICT 1
 (* ****** ****** *)
 
 local
-#include "libats-/wdblair/jsmn/DATS/jsmn.dats"
+#include "./../libats-wdblair/jsmn/DATS/jsmn.dats"
 in (*nothing*) end
 
 (* ****** ****** *)

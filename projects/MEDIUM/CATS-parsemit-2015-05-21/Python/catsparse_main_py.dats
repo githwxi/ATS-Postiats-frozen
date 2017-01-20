@@ -17,7 +17,7 @@
 //
 staload
 STDIO = 
-"{$PATSLIBATSC}/SATS/stdio.sats"
+"{$PATSLIBATSLIBC}/SATS/stdio.sats"
 //
 (* ****** ****** *)
 

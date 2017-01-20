@@ -27,7 +27,7 @@ staload "./catsparse_cil.sats"
 //
 typedef T = string
 //
-#include "{$LIBATSHWXI}/globals/HATS/gstacklst.hats"
+#include "{$HX_GLOBALS}/HATS/gstacklst.hats"
 //
 implement
 the_namesp_pop () = pop_exn ()
@@ -51,7 +51,7 @@ staload "./catsparse_cil.sats"
 //
 typedef T = string
 //
-#include "{$LIBATSHWXI}/globals/HATS/gstacklst.hats"
+#include "{$HX_GLOBALS}/HATS/gstacklst.hats"
 //
 implement
 the_clsname_pop () = pop_exn ()

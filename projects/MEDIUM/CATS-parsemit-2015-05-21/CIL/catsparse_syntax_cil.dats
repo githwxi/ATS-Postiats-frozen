@@ -116,7 +116,7 @@ local
 "share/atspre_define.hats"
 
 #include
-"{$LIBATSHWXI}/globals/HATS/gcount.hats"
+"{$HX_GLOBALS}/HATS/gcount.hats"
 
 in // of [local]
 
@@ -189,7 +189,7 @@ implement hashtbl$recapacitize<> () = 1(*resizable*)
 //
 #define CAPACITY 1024
 //
-#include "{$LIBATSHWXI}/globals/HATS/ghashtbl_chain.hats"
+#include "{$HX_GLOBALS}/HATS/ghashtbl_chain.hats"
 //
 } (* end of [staload] *)
 
@@ -245,7 +245,7 @@ implement hashtbl$recapacitize<> () = 1(*resizable*)
 //
 #define CAPACITY 1024
 //
-#include "{$LIBATSHWXI}/globals/HATS/ghashtbl_chain.hats"
+#include "{$HX_GLOBALS}/HATS/ghashtbl_chain.hats"
 //
 } (* end of [staload] *)
 
@@ -280,7 +280,13 @@ staload F0DECL_CLO =
 //
 staload "./catsparse.sats"
 //
-typedef key = symbol and itm = '(s0exp(*env*), s0exp(*arg*), s0exp(*res*))
+typedef
+key = symbol
+typedef
+itm =
+$tup (
+s0exp(*env*), s0exp(*arg*), s0exp(*res*)
+) (* typedef *)
 //
 implement
 gequal_val_val<key> (k1, k2) = (k1 = k2)
@@ -293,13 +299,13 @@ hash_key<key> (sym) =
 //
 // HX: [gidentity] is called to avoid a bug
 //
-  gidentity(hash_key<string>(symbol_get_name(sym)))
+gidentity(hash_key<string>(symbol_get_name(sym)))
 //
 implement hashtbl$recapacitize<> () = 1(*resizable*)
 //
 #define CAPACITY 1024
 //
-#include "{$LIBATSHWXI}/globals/HATS/ghashtbl_chain.hats"
+#include "{$HX_GLOBALS}/HATS/ghashtbl_chain.hats"
 //
 } (* end of [staload] *)
 

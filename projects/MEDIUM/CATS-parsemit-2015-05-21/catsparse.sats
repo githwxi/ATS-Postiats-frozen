@@ -66,7 +66,7 @@ stadef dynarray = $DA.dynarray
 (* ****** ****** *)
 //
 staload
-CS = "{$LIBATSHWXI}/cstream/SATS/cstream.sats"
+CS = "{$HX_CSTREAM}/SATS/cstream.sats"
 stadef cstream = $CS.cstream
 //
 (* ****** ****** *)

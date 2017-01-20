@@ -27,7 +27,7 @@ staload "./catsparse.sats"
 //
 typedef T = fil_t
 //
-#include "{$LIBATSHWXI}/globals/HATS/gstacklst.hats"
+#include "{$HX_GLOBALS}/HATS/gstacklst.hats"
 //
 implement
 the_filename_pop () = pop_exn ()
@@ -64,7 +64,7 @@ staload
 //
 implement hashtbl$recapacitize<> () = 0
 //
-#include "{$LIBATSHWXI}/globals/HATS/ghashtbl_linprb.hats"
+#include "{$HX_GLOBALS}/HATS/ghashtbl_linprb.hats"
 //
 } (* end of [staload] *)
 
@@ -257,7 +257,7 @@ staload "./catsparse.sats"
 //
 typedef T = lexerr
 //
-#include "{$LIBATSHWXI}/globals/HATS/gstacklst.hats"
+#include "{$HX_GLOBALS}/HATS/gstacklst.hats"
 //
 implement
 the_lexerrlst_insert (x) = push (x)
@@ -280,7 +280,7 @@ staload "./catsparse_parsing.sats"
 //
 typedef T = parerr
 //
-#include "{$LIBATSHWXI}/globals/HATS/gstacklst.hats"
+#include "{$HX_GLOBALS}/HATS/gstacklst.hats"
 //
 implement
 the_parerrlst_insert (x) = push (x)

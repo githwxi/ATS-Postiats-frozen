@@ -4,6 +4,4 @@
 *)
 
 #define
-LIBATSWDBLAIR_sourceloc "$ATSLANGWEBLIB/contrib/libats-/wdblair"
-#define
-LIBATSWDBLAIR_targetloc "$PATSHOMERELOC/contrib/libats-/wdblair"
+LIBATSWDBLAIR_targetloc "libats-wdblair"

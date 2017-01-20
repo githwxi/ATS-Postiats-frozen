@@ -8,9 +8,12 @@ include \
 $(PATSHOME)/share/atsmake-pre.mk
 
 ######
-
-PATSCC := $(PATSCC) -IATS ../../
-
+#
+PATSCC := \
+$(PATSCC) \
+  -IATS ./../.. \
+  -I ./../../libats-wdblair
+#
 ######
 
 PYTHON_PREFIX = $(shell python-config --prefix)

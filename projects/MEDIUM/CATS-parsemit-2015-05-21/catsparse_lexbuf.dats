@@ -24,7 +24,7 @@ staload "./catsparse.sats"
 (* ****** ****** *)
 //
 staload _ = "libats/DATS/stringbuf.dats"
-staload _ = "{$LIBATSHWXI}/cstream/DATS/cstream.dats"
+staload _ = "{$HX_CSTREAM}/DATS/cstream.dats"
 //
 (* ****** ****** *)
 
