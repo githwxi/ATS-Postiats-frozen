@@ -51,11 +51,11 @@ script:
   - make C3NSTRINTKND=${C3NSTRINTKND} -f Makefile_devl CC=${CC} GCFLAG=${GCFLAG} all
   - export PATH=${PATH}:${PATSHOME}/bin
   # Building parsemit
-  - (cd ${PATSCONTRIB}/projects/MEDIUM/CATS-parsemit && make all)
+  - (cd ${PATSHOME}/contrib/CATS-parsemit && make all)
   # Building atscc2js
-  - (cd ${PATSCONTRIB}/projects/MEDIUM/CATS-atsccomp/CATS-atscc2js && make build && mv -f atscc2js ${PATSHOME}/bin/.)
+  - (cd ${PATSHOME}/contrib/CATS-atscc2js && make build && mv -f atscc2js ${PATSHOME}/bin/.)
   # Building atscc2php
-  - (cd ${PATSCONTRIB}/projects/MEDIUM/CATS-atsccomp/CATS-atscc2php && make build && mv -f atscc2php ${PATSHOME}/bin/.)
+  - (cd ${PATSHOME}/contrib/CATS-atscc2php && make build && mv -f atscc2php ${PATSHOME}/bin/.)
   # Running regress test
   - cd ${TRAVIS_BUILD_DIR}
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then export Makefile_test=Makefile_test_osx; fi
