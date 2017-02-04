@@ -13,6 +13,11 @@ all::
 ######
 #
 all:: ; \
+$(MAKE) -C hwxi-2017-02-04 -f Makefile_test
+#
+######
+#
+all:: ; \
 $(MAKE) -C hwxi-2016-12-22 -f Makefile_test
 #
 ######

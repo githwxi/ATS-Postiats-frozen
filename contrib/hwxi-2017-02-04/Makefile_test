@@ -1,0 +1,24 @@
+##
+## A Makefile for testing
+##
+
+## ###### ###### ##
+
+MAKE=make
+
+## ###### ###### ##
+
+all::
+
+## ###### ###### ##
+
+ifeq ($(OS),linux)
+all:: \
+weboxy
+weboxy:: ; \
+$(MAKE) -C weboxy -f Makefile_test
+endif # if(OS=linux)
+
+## ###### ###### ##
+
+## ###### end of [Makefile_test] ###### ##
