@@ -56,15 +56,20 @@ PATSOLVE_OBJECTS += solving/solving.o
 
 ######
 
-all:: setup patsolve deploy
+all:: setup
+all:: patsolve
+#
+# all:: deploy
+#
 cleanall:: ; $(RMF) patsolve 
+
+######
 
 .phony: setup
 
-setup::
-	make -C constraint
-	make -C parsing
-	make -C solving
+setup:: ; make -C parsing
+setup:: ; make -C constraint
+setup:: ; make -C solving
 
 ######
 
@@ -73,19 +78,17 @@ include solving/Z3/atsmake-z3.mk
 
 ######
 #
-deploy: patsolve
-	cp patsolve $(PATSHOME)/bin/
+# deploy: patsolve; cp patsolve $(PATSHOME)/bin/
 #
-patsolve: $(PATSOLVE_OBJECTS)
-	$(PATSCC) -o $@ $^ $(LDFLAGS)
+patsolve: \
+$(PATSOLVE_OBJECTS); $(PATSCC) -o $@ $^ $(LDFLAGS)
 #
 ######
 #
-cleanall:: ; make -C constraint cleanall
-#
 cleanall:: ; make -C parsing cleanall
-#
+cleanall:: ; make -C constraint cleanall
 cleanall:: ; make -C solving cleanall
+#
 cleanall:: ; make -C solving/Z3 cleanall
 #
 ###### end of [Makefile] ######
