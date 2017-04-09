@@ -9,7 +9,8 @@ CCOPT=gcc
 ######
 #
 PATSHOMEQ="$(PATSHOME)"
-PATSCONTRIBQ="$(PATSCONTRIB)"
+PATSCONTRIBQ=\
+"$(PATSHOME)/npm-utils/contrib"
 #
 ######
 
@@ -19,7 +20,7 @@ PATSOPT=$(PATSHOMEQ)/bin/patsopt
 ######
 
 CFLAGS :=
-CFLAGS +=-I$(PATSCONTRIBQ)/contrib 
+CFLAGS +=-I$(PATSCONTRIBQ)
 CFLAGS += $(shell xml2-config --cflags)
 
 ######
