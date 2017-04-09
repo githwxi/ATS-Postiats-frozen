@@ -1,0 +1,83 @@
+{
+  "_args": [
+    [
+      "atscntrb-as-ats3d",
+      "/tmp"
+    ]
+  ],
+  "_from": "atscntrb-as-ats3d@latest",
+  "_id": "atscntrb-as-ats3d@0.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/atscntrb-as-ats3d",
+  "_nodeVersion": "4.2.6",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/atscntrb-as-ats3d-0.0.1.tgz_1493306922013_0.31164124701172113"
+  },
+  "_npmUser": {
+    "email": "artyom.shalkhakov@gmail.com",
+    "name": "ashalkhakov"
+  },
+  "_npmVersion": "3.5.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "atscntrb-as-ats3d",
+    "raw": "atscntrb-as-ats3d",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/atscntrb-as-ats3d/-/atscntrb-as-ats3d-0.0.1.tgz",
+  "_shasum": "e3860ef9d87c02b20e6b46e677e57bdc5a2d96ff",
+  "_shrinkwrap": null,
+  "_spec": "atscntrb-as-ats3d",
+  "_where": "/tmp",
+  "author": {
+    "email": "artyom.shalkhakov@gmail.com",
+    "name": "Artyom Shalkhakov"
+  },
+  "bugs": {
+    "url": "https://github.com/ashalkhakov/ats3d/issues"
+  },
+  "dependencies": {},
+  "description": "3D graphics utilities for ATS/Postiats",
+  "devDependencies": {},
+  "directories": {
+    "doc": "doc"
+  },
+  "dist": {
+    "shasum": "e3860ef9d87c02b20e6b46e677e57bdc5a2d96ff",
+    "tarball": "https://registry.npmjs.org/atscntrb-as-ats3d/-/atscntrb-as-ats3d-0.0.1.tgz"
+  },
+  "gitHead": "b6461bed815135b1b7b688188e8979d65f2bef36",
+  "homepage": "https://github.com/ashalkhakov/ats3d#readme",
+  "keywords": [
+    "3d",
+    "ATS",
+    "graphics"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "N/A",
+  "maintainers": [
+    {
+      "name": "ashalkhakov",
+      "email": "artyom.shalkhakov@gmail.com"
+    }
+  ],
+  "name": "atscntrb-as-ats3d",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashalkhakov/ats3d.git"
+  },
+  "scripts": {
+    "test": "cd src/TEST && make regress"
+  },
+  "version": "0.0.1"
+}

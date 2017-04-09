@@ -12,7 +12,8 @@
 //
 #define
 LIBXML2_targetloc
-"$PATSCONTRIB/contrib/libxml2/libxml"
+"$PATSHOME/npm-utils\
+/contrib/atscntrb-libxml2/libxml"
 //
 (* ****** ****** *)
 //
