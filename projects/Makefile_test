@@ -13,7 +13,7 @@ SUBDIRS += SMALL/html2pats-2016-01-13
 ######
 #
 SUBDIRS += \
-  MEDIUM/CATS-parsemit-2015-05-21/JavaScript
+MEDIUM/CATS-parsemit-2015-05-21/JavaScript
 #
 SUBDIRS += MEDIUM/CATS-parsemit-2015-05-21/PHP
 SUBDIRS += MEDIUM/CATS-parsemit-2015-05-21/Python
@@ -21,6 +21,10 @@ SUBDIRS += MEDIUM/CATS-parsemit-2015-05-21/Perl
 #
 SUBDIRS += MEDIUM/CATS-parsemit-2015-05-21/CIL
 #
+######
+
+SUBDIRS += MEDIUM/OpenSCAD-2017-05-15/TEST
+
 ######
 #
 testall:: ; \
