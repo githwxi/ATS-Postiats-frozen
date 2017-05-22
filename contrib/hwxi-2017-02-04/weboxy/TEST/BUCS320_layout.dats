@@ -4,8 +4,9 @@
 
 (* ****** ****** *)
 //
-#include
-"share/atspre_define.hats"
+#define
+PATSHOME_targetloc
+"$PATSHOME"
 //
 #include
 "share/atspre_staload.hats"

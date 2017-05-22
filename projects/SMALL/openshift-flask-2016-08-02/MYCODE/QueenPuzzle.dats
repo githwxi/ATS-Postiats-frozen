@@ -1,12 +1,7 @@
 (* ****** ****** *)
 //
-#define
-LIBATSCC2PY3_targetloc
-"$PATSHOME\
-/contrib/libatscc2py3/ATS2-0.3.2"
-//
-(* ****** ****** *)
-//
+#include
+"share/atspre_define.hats"
 #include
 "{$LIBATSCC2PY3}/staloadall.hats"
 //
@@ -89,11 +84,10 @@ end // end of [QueenPuzzle_solve]
 %{^
 import sys
 ######
-from libatscc2py_all import *
-from ats2pylibc_random_cats import *
-from ats2pylibc_datetime_cats import *
-######
 sys.setrecursionlimit(1000000)
+######
+from libatscc2py3_all import *
+from libatscc2py3_all_pylibc import *
 ######
 %} // end of [%{^]
 

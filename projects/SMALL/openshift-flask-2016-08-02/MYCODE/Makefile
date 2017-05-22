@@ -41,6 +41,22 @@ $(PATSOPT) -d $< | $(ATSCC2PY) -o $@ -i
 cleanall:: ; $(RMF) QueenPuzzle_dats.py
 #
 ######
+#
+all:: \
+BUCS320/assign01_dats.py
+BUCS320/assign01_dats.py: \
+BUCS320/assign01.dats ; $(PATSOPT) -d $< | $(ATSCC2PY) -o $@ -i
+#
+cleanall:: ; $(RMF) BUCS320/assign01_dats.py
+#
+all:: \
+BUCS320/assign02_dats.py
+BUCS320/assign02_dats.py: \
+BUCS320/assign02.dats ; $(PATSOPT) -d $< | $(ATSCC2PY) -o $@ -i
+#
+cleanall:: ; $(RMF) BUCS320/assign02_dats.py
+#
+######
 
 testall:: all
 testall:: cleanall

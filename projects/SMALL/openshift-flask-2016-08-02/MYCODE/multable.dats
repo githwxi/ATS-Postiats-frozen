@@ -1,10 +1,11 @@
 (* ****** ****** *)
+
+#define ATS_DYNLOADFLAG 0
+
+(* ****** ****** *)
 //
-#define
-LIBATSCC2PY3_targetloc
-"$PATSHOME\
-/contrib/libatscc2py3/ATS2-0.3.2"
-//
+#include
+"share/atspre_define.hats"
 #include
 "{$LIBATSCC2PY3}/staloadall.hats"
 //
@@ -13,14 +14,6 @@ staload
 staload
 "{$LIBATSCC2PY3}/SATS/PYLIBC/datetime.sats"
 //
-(* ****** ****** *)
-
-#define ATS_DYNLOADFLAG 0
-
-(* ****** ****** *)
-
-#define :: cons
-
 (* ****** ****** *)
 //
 implement
@@ -94,11 +87,10 @@ end // end of [multable_create]
 %{^
 import sys
 ######
-from libatscc2py_all import *
-from ats2pylibc_random_cats import *
-from ats2pylibc_datetime_cats import *
-######
 sys.setrecursionlimit(1000000)
+######
+from libatscc2py3_all import *
+from libatscc2py3_all_pylibc import *
 ######
 %} // end of [%{^]
 
