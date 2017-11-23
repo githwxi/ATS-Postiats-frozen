@@ -9,6 +9,7 @@ SUBDIRS :=
 ######
 #
 SUBDIRS += SMALL/html2pats-2016-01-13
+SUBDIRS += SMALL/Tic-Tac-Toe-2017-11-22
 #
 ######
 #
