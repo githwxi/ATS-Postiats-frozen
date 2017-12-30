@@ -14,11 +14,11 @@ if
   expr ${is_osx} > 0
 then
 #
-# export CC=gcc-4.8
-# export GCC=gcc-4.8
-#
   brew install gmp
+  brew install gcc5
+#
   brew install bdw-gc
+#
   brew install pcre
   brew install glib
   brew install cairo
