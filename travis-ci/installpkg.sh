@@ -15,8 +15,6 @@ if
 then
 #
   brew install gmp
-  brew install gcc5
-#
   brew install bdw-gc
 #
   brew install pcre
