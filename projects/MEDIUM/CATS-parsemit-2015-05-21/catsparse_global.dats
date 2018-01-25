@@ -20,14 +20,17 @@ staload "./catsparse.sats"
 staload
 FIL = {
 //
-#include
-"share/atspre_define.hats"
-//
 staload "./catsparse.sats"
 //
 typedef T = fil_t
 //
-#include "{$HX_GLOBALS}/HATS/gstacklst.hats"
+#define
+HX_GLOBALS_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-globals"
+#include
+"{$HX_GLOBALS}/HATS/gstacklst.hats"
 //
 implement
 the_filename_pop () = pop_exn ()
@@ -48,9 +51,6 @@ val () = the_filename_push (filename_dummy)
 staload KWORD =
 {
 //
-#include
-"share/atspre_define.hats"
-//
 staload "./catsparse.sats"
 //
 typedef key = string
@@ -58,13 +58,18 @@ typedef itm = keyword
 //
 #define CAPACITY 1024
 //
-//
 staload
 "libats/SATS/hashtbl_linprb.sats"
 //
 implement hashtbl$recapacitize<> () = 0
 //
-#include "{$HX_GLOBALS}/HATS/ghashtbl_linprb.hats"
+#define
+HX_GLOBALS_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-globals"
+#include
+"{$HX_GLOBALS}/HATS/ghashtbl_linprb.hats"
 //
 } (* end of [staload] *)
 
@@ -250,14 +255,17 @@ end // end of [keyword_search]
 staload
 LEXERR = {
 //
-#include
-"share/atspre_define.hats"
-//
 staload "./catsparse.sats"
 //
 typedef T = lexerr
 //
-#include "{$HX_GLOBALS}/HATS/gstacklst.hats"
+#define
+HX_GLOBALS_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-globals"
+#include
+"{$HX_GLOBALS}/HATS/gstacklst.hats"
 //
 implement
 the_lexerrlst_insert (x) = push (x)
@@ -272,15 +280,18 @@ the_lexerrlst_pop_all () = pop_all ()
 staload
 PARERR = {
 //
-#include
-"share/atspre_define.hats"
-//
 staload "./catsparse.sats"
 staload "./catsparse_parsing.sats"
 //
 typedef T = parerr
 //
-#include "{$HX_GLOBALS}/HATS/gstacklst.hats"
+#define
+HX_GLOBALS_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-globals"
+#include
+"{$HX_GLOBALS}/HATS/gstacklst.hats"
 //
 implement
 the_parerrlst_insert (x) = push (x)

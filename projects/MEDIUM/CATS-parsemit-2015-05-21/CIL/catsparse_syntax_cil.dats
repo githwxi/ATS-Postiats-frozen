@@ -112,9 +112,11 @@ end // end of [strip_prefix]
 
 local
 
-#include
-"share/atspre_define.hats"
-
+#define
+HX_GLOBALS_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-globals"
 #include
 "{$HX_GLOBALS}/HATS/gcount.hats"
 
@@ -165,9 +167,6 @@ label_for_instrlst
 staload F0HEADDEF =
 {
 //
-#include
-"share/atspre_define.hats"
-//
 staload "./catsparse.sats"
 //
 typedef key = symbol and itm = f0head
@@ -179,17 +178,31 @@ staload
 "libats/SATS/hashtbl_chain.sats"
 //
 implement
-hash_key<key> (sym) =
+hash_key<key>(sym) =
 //
-// HX: [gidentity] is called to avoid a bug
+// HX: [gidentity]
+// is called to avoid a bug
+// in tail-call optimization
 //
-  gidentity(hash_key<string>(symbol_get_name(sym)))
+(
+gidentity
+(hash_key<string>
+ (symbol_get_name(sym)))
+)
 //
-implement hashtbl$recapacitize<> () = 1(*resizable*)
+implement
+hashtbl$recapacitize<>() = 1(*resizable*)
 //
-#define CAPACITY 1024
+#define
+CAPACITY 1024
 //
-#include "{$HX_GLOBALS}/HATS/ghashtbl_chain.hats"
+#define
+HX_GLOBALS_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-globals"
+#include
+"{$HX_GLOBALS}/HATS/ghashtbl_chain.hats"
 //
 } (* end of [staload] *)
 
@@ -221,31 +234,43 @@ f0head_search_opt
 staload STATMPS0EXP =
 {
 //
-#include
-"share/atspre_define.hats"
+#define CAPACITY 1024
 //
 staload "./catsparse.sats"
 //
-typedef key = symbol and itm = s0exp
+typedef
+itm = s0exp
+and
+key = symbol
 //
 implement
-gequal_val_val<key> (k1, k2) = (k1 = k2)
+gequal_val_val<key>
+  (k1, k2) = (k1 = k2)
 //
 staload
 "libats/SATS/hashtbl_chain.sats"
 //
 implement
-hash_key<key> (sym) =
+hash_key<key>(sym) =
 //
 // HX: [gidentity] is called to avoid a bug
 //
-  gidentity(hash_key<string>(symbol_get_name(sym)))
+(
+gidentity
+(hash_key<string>
+ (symbol_get_name(sym)))
+)
 //
-implement hashtbl$recapacitize<> () = 1(*resizable*)
+implement
+hashtbl$recapacitize<>() = 1(*resizable*)
 //
-#define CAPACITY 1024
-//
-#include "{$HX_GLOBALS}/HATS/ghashtbl_chain.hats"
+#define
+HX_GLOBALS_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-globals"
+#include
+"{$HX_GLOBALS}/HATS/ghashtbl_chain.hats"
 //
 } (* end of [staload] *)
 
@@ -275,10 +300,8 @@ statmps0exp_search_opt
 staload F0DECL_CLO =
 {
 //
-#include
-"share/atspre_define.hats"
-//
-staload "./catsparse.sats"
+staload
+"./catsparse.sats"
 //
 typedef
 key = symbol
@@ -289,23 +312,36 @@ s0exp(*env*), s0exp(*arg*), s0exp(*res*)
 ) (* typedef *)
 //
 implement
-gequal_val_val<key> (k1, k2) = (k1 = k2)
+gequal_val_val<key>
+  (k1, k2) = (k1 = k2)
 //
 staload
 "libats/SATS/hashtbl_chain.sats"
 //
 implement
-hash_key<key> (sym) =
+hash_key<key>(sym) =
 //
 // HX: [gidentity] is called to avoid a bug
 //
-gidentity(hash_key<string>(symbol_get_name(sym)))
+(
+gidentity
+(hash_key<string>
+(symbol_get_name(sym)))
+)
 //
-implement hashtbl$recapacitize<> () = 1(*resizable*)
+implement
+hashtbl$recapacitize<> () = 1(*resizable*)
 //
-#define CAPACITY 1024
+#define
+CAPACITY 1024
 //
-#include "{$HX_GLOBALS}/HATS/ghashtbl_chain.hats"
+#define
+HX_GLOBALS_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-globals"
+#include
+"{$HX_GLOBALS}/HATS/ghashtbl_chain.hats"
 //
 } (* end of [staload] *)
 

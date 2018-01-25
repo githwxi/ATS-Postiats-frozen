@@ -20,14 +20,18 @@ staload "./catsparse_cil.sats"
 staload
 NSP = {
 //
-#include
-"share/atspre_define.hats"
-//
-staload "./catsparse_cil.sats"
+staload
+"./catsparse_cil.sats"
 //
 typedef T = string
 //
-#include "{$HX_GLOBALS}/HATS/gstacklst.hats"
+#define
+HX_GLOBALS_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-globals"
+#include
+"{$HX_GLOBALS}/HATS/gstacklst.hats"
 //
 implement
 the_namesp_pop () = pop_exn ()
@@ -44,14 +48,18 @@ the_namesp_get () = get_top_exn ()
 staload
 CLS = {
 //
-#include
-"share/atspre_define.hats"
-//
-staload "./catsparse_cil.sats"
+staload
+"./catsparse_cil.sats"
 //
 typedef T = string
 //
-#include "{$HX_GLOBALS}/HATS/gstacklst.hats"
+#define
+HX_GLOBALS_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-globals"
+#include
+"{$HX_GLOBALS}/HATS/gstacklst.hats"
 //
 implement
 the_clsname_pop () = pop_exn ()

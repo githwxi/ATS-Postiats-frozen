@@ -9,14 +9,21 @@
 (* ****** ****** *)
 //
 #include
-"share/atspre_define.hats"
-#include
-"share/atspre_staload.hats"
+"share\
+/atspre_staload.hats"
 //
 (* ****** ****** *)
 
 staload UN = $UNSAFE
 
+(* ****** ****** *)
+//
+#define
+HX_CSTREAM_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-cstream"
+//
 (* ****** ****** *)
 
 staload "./catsparse.sats"

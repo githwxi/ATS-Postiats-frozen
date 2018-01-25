@@ -38,8 +38,11 @@ THE SOFTWARE.
 
 (* ****** ****** *)
 //
-#include
-"share/atspre_define.hats"
+#define
+HX_CSTREAM_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-cstream"
 //
 (* ****** ****** *)
 //

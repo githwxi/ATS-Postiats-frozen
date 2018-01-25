@@ -21,35 +21,48 @@ staload "./catsparse_typedef.sats"
 staload TYPEDEF =
 {
 //
-#include
-"share/atspre_define.hats"
-//
 staload "./catsparse.sats"
 //
-typedef key = symbol and itm = tyrec
+typedef
+itm = tyrec
+and
+key = symbol
 //
 implement
-gequal_val_val<key> (k1, k2) = (k1 = k2)
+gequal_val_val<key>
+  (k1, k2) = (k1 = k2)
 //
 staload
 "libats/SATS/hashtbl_chain.sats"
 //
 implement
-hash_key<key> (sym) =
+hash_key<key>(sym) =
 //
 // HX:
-// [gidentity] is called to circumvent a bug
+// [gidentity] is
+// called to circumvent a bug
+// in tail-call optimization!!!
 //
 (
-  gidentity(hash_key<string>(symbol_get_name(sym)))
+gidentity
+(hash_key<string>
+(symbol_get_name(sym)))
 )
 //
 implement
-hashtbl$recapacitize<> () = 1(*resizable*)
+hashtbl$recapacitize<>
+  () = 1(*resizable*)
+//
+#define
+HX_GLOBALS_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-globals"
 //
 #define CAPACITY 1024
 //
-#include "{$HX_GLOBALS}/HATS/ghashtbl_chain.hats"
+#include
+"{$HX_GLOBALS}/HATS/ghashtbl_chain.hats"
 //
 } (* end of [staload] *)
 

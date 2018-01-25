@@ -49,13 +49,16 @@ local
 staload SYMCNT =
 {
 //
-#include
-"share/atspre_define.hats"
-//
 staload _(*anon*) =
 "prelude/DATS/integer.dats"
 //
-#include "{$HX_GLOBALS}/HATS/gcount.hats"
+#define
+HX_GLOBALS_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-globals"
+#include
+"{$HX_GLOBALS}/HATS/gcount.hats"
 //
 } (* end of [staload] *)
 
@@ -63,9 +66,6 @@ staload _(*anon*) =
 
 staload SYMBOL =
 {
-//
-#include
-"share/atspre_define.hats"
 //
 staload "./catsparse.sats"
 //
@@ -79,6 +79,11 @@ staload
 //
 implement hashtbl$recapacitize<> () = 1
 //
+#define
+HX_GLOBALS_targetloc
+"\
+$PATSHOME/contrib\
+/atscntrb/atscntrb-hx-globals"
 #include
 "{$HX_GLOBALS}/HATS/ghashtbl_linprb.hats"
 //
