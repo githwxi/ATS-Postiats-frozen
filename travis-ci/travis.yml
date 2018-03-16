@@ -74,3 +74,4 @@ after_script:
   # HX-2017-03-24: test run
   # HX-2017-08-18: test run
   # HX-2017-11-12: for releasing ATS2-0.3.8
+  # HX-2018-03-15: for releasing ATS2-0.3.10
