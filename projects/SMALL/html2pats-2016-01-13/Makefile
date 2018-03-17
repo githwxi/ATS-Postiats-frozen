@@ -10,7 +10,7 @@ CCOPT=gcc
 #
 PATSHOMEQ="$(PATSHOME)"
 PATSCONTRIBQ=\
-"$(PATSHOME)/npm-utils/contrib"
+"$(PATSHOME)/npm-utils/contrib/atscntrb"
 #
 ######
 
